@@ -19,7 +19,7 @@ def read_graph(file_path: str) -> IGraph:
                 graph.add_vertex(source)
                 graph.add_vertex(destination)
 
-                # Add edge (bi-directional)
+                # Add a directed edge from source to destination
                 graph.add_edge(highway, source, destination)
     except FileNotFoundError:
             print(f"Error: File '{file_path}' not found.")
